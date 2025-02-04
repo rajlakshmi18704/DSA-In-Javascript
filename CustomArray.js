@@ -14,7 +14,7 @@ this.data[index]
  return this.data[index]
 }
 pop(){
-    const lastItem=this.data[this.length]
+    const lastItem=this.data[this.length-1]
     delete this.data[this.length-1]
     this.length--
    return lastItem
@@ -36,7 +36,8 @@ pop(){
 //learnt this method
 shift(){
     const firseele=this.data[0]
-   for(let i=0;i<=this.length-2;i++){
+    console.log("length of array is ",this.length)
+   for(let i=0;i<=this.length-1;i++){
     
          const firstele=this.data[i]
      this.data[i]=this.data[i+1]
@@ -45,6 +46,13 @@ shift(){
     delete this.data[this.length-1]
     this.length--
     return firseele
+}
+deleteByIndex(index){
+for(let i=index;i<this.length-1;i++){
+    this.data[i]=this.data[i+1]
+}
+delete this.data[this.length-1]
+this.length--
 }
 
 }
@@ -55,10 +63,10 @@ newArray.push("mango")
 newArray.push("berries")
 newArray.push("Rice")
 console.log(newArray)
-console.log("After shift")
-newArray.shift()
+// console.log("After shift")
+// newArray.shift()
 
-
+newArray.deleteByIndex(3)
 
 // newArray.pop()
 // newArray.pop()
