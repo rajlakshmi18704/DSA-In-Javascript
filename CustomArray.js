@@ -6,7 +6,8 @@ class customArray{
 push(item){
     
         this.data[this.length]=item
-       this.length++
+        this.length++
+     
 return this.length
 }
 get(index){
@@ -66,7 +67,7 @@ console.log(newArray)
 // console.log("After shift")
 // newArray.shift()
 
-newArray.deleteByIndex(3)
+// newArray.deleteByIndex(3)
 
 // newArray.pop()
 // newArray.pop()
