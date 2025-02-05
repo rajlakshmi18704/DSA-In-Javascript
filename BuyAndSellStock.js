@@ -4,7 +4,7 @@ let SellPrice=""
 let sellPriceind=0
 let BuyPrice=prices[0]
 let BuyPriceind=0
-for( let i=1;i<prices.length-1;i++){
+for( let i=0;i<prices.length-1;i++){
     if(prices[i]< BuyPrice){
         BuyPrice=prices[i]
       BuyPriceind=i;
